@@ -143,6 +143,9 @@ function cube(size) {
 function plane(p, n, size) {
     n = n.normalize().negate();
     let m = new THREE.Vector3(0, 0, 1);
+    if (Math.abs(m.dot(n)) < 0.01) {
+        m = new THREE.Vector3(1,0,0);
+    }
 
     let a = n.clone().cross(m);
     let b = a.clone().cross(n);

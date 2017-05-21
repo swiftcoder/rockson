@@ -44911,6 +44911,9 @@ function cube(size) {
 function plane(p, n, size) {
     n = n.normalize().negate();
     var m = new THREE.Vector3(0, 0, 1);
+    if (Math.abs(m.dot(n)) < 0.01) {
+        m = new THREE.Vector3(1, 0, 0);
+    }
 
     var a = n.clone().cross(m);
     var b = a.clone().cross(n);
