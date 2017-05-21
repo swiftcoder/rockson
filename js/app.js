@@ -44732,7 +44732,7 @@ var init = function init() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 3000);
     scene.add(camera);
-    camera.position.set(0, 0, 5);
+    camera.position.set(0, 0, 7.5);
     controls = new OrbitControls(camera);
     //le Cube
     buildCube();

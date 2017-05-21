@@ -25,7 +25,7 @@ let init = () => {
         3000
     );
     scene.add(camera);
-    camera.position.set(0, 0, 5);
+    camera.position.set(0, 0, 7.5);
     controls = new OrbitControls(camera);
     //le Cube
     buildCube();
